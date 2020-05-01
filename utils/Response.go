@@ -4,19 +4,20 @@ import (
 	"drawerBackend/models"
 )
 
-func Response(data interface{}, error interface{}) models.Response {
-	if error != nil {
+func Response(data interface{}, err models.Error) models.Response {
+	if !HasNoError(err) {
 		return models.Response{
 			Error: models.Error{
-				Code:    error.(models.Error).Code,
-				Message: error.(models.Error).Message,
+				Code:    err.Code,
+				Message: err.Message,
 			},
 			Success: false,
 			Data:    nil,
 		}
 	}
+
 	return models.Response{
-		Error:   models.Error{},
+		Error:   err,
 		Success: true,
 		Data:    data,
 	}

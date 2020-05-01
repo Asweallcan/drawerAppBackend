@@ -1,4 +1,4 @@
-package resp
+package models_resp
 
 type AccessTokenResp struct {
 	Access_token string `json:"access_token"`

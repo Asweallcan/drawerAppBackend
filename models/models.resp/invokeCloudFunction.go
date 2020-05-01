@@ -1,7 +1,7 @@
-package resp
+package models_resp
 
 type CloudFunctionResp struct {
 	Errcode   int
-	eErrmsg    string
+	Errmsg    string
 	Resp_data interface{}
 }

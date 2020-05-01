@@ -1,4 +1,4 @@
-package schema
+package models_schema
 
 import "github.com/jinzhu/gorm"
 

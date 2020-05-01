@@ -1,5 +1,6 @@
 package constants
 
 const (
-	TOKEN_FAIL_MESSAGE = "获取access_token失败"
+	COMMON_ERROR_MESSAGE = "服务器错误"
+	TOKEN_FAIL_MESSAGE   = "获取access_token失败"
 )
